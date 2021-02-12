@@ -1,0 +1,290 @@
+/*-----------Globel Classes----------*/
+
+.section-title{
+font-size: 44px;
+border-bottom: none !important;
+font-family: "Lato", Helvetica, Arial, sans-serif;
+font-weight: 700;
+}
+
+.section-title .border-line {
+    position: relative;
+    display: block;
+    top: 10px;
+    height: 30px;
+    width: 250px;
+    margin: 0 auto;
+    background: transparent;
+}
+
+.section-title .border-line:before {
+    content: '';
+    width: 98px;
+    height: 6px;
+    background-color: #64485C !important;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.section-title .border-line .border-box {
+    position: absolute;
+    top: 0;
+    left: 44%;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: 5px solid #64485C !important;
+    transform: rotate(45deg);
+}
+
+.section-title .border-line:after {
+    content: '';
+    width: 98px;
+    height: 6px;
+    background-color: #64485C !important;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+/*---------------------------HEADER TOP------------------------------*/
+
+.header-top{
+    background-color: #64485C;
+    color: #333333;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+    padding: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(255,255,255,.75);
+}
+
+
+/*---------------------------Hero Section------------------------------*/
+
+.hero-section{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 720px;
+    position: relative;
+    max-width: 100%;
+}
+
+.hero-text {
+    position: absolute;
+    text-align: center;
+    color: #ffffff;
+    width: 88%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text h1{
+    font-size: 50px;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+.hero-text p{
+    font-size: 22px;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+}
+
+/*---------------------------Services Section------------------------------*/
+
+
+.services-section{
+    background: #f0f0f0;
+}
+
+.section-title {
+    position: relative;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 60px;
+    color: #64485C !important;
+}
+
+.services-section h2 {
+    font-size: 44px;
+    border-bottom: none !important;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+.services-section .card-body {
+    margin-bottom: .75rem;
+    text-align: center;
+}
+
+.services-section .card {
+    min-height: 511px;
+    margin-bottom: 30px;
+    border-radius: 0px;
+    box-shadow: 10px 10px 20px 8px rgb(0 0 0 / 50%);
+    border: 1px solid #ffffff;
+}
+
+.services-section .card img{
+    padding: 20px;
+}
+
+.services-section .card-body .card-title{
+    font-size: 25px;
+}
+
+.services-section .card-body .blog-text {
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: -4px;
+}
+
+.services-section .sevices-btn button{
+    margin-top: 9px;
+}
+
+.services-section .sevices-btn {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.services-section .btn-primary{
+    border: none;
+    outline: none;
+    width: 150px;
+    background-color: #64485C !important;
+}
+
+
+/*---------------------------Codonist Section------------------------------*/
+.codonists{
+    background: #f0f0f0;
+}
+
+.codonists .card {
+    text-align: center;
+    margin-top: 80px;
+    min-height: 386px;
+}
+
+.codonists .card img {
+    margin: -25% auto 0;
+    width: 180px;
+    min-height: 182px !important;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+/*---------------------------Works Section------------------------------*/
+
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 30px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+#myBtnContainer .btn {
+    font-size: 15px;
+    outline: none;
+    padding: 3px 10px;
+    color: #ffffff;
+    background-color: #2E2A3EEB !important;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/* Add a dark background color to the active button */
+.btn.active {
+    font-size: 16px;
+    color: black;
+    font-weight: 400;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.text {
+  color: #ffc107;
+  font-size: 14px;
+  padding: 16px 32px;
+  font-weight: 400;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.middle .center-text{
+    font-size: 19px;
+    color: white;
+    white-space: nowrap;
+    font-weight: 500;
+    font-family: 'Titillium Web', sans-serif; 
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.content:hover .image {
+  opacity: 0.3;
+}
+
+.content:hover .middle {
+  opacity: 1;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    margin-bottom: -9px;
+}
+
