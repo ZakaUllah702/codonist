@@ -1,0 +1,25 @@
+/*
+Theme Name:Codonist
+Author: Codonist Developer
+Version: 1.0.0
+URL: codonist.com
+*/
+
+header{
+	background-color: lightblue;
+	width: 100%;
+	text-align: center;
+	border-bottom: 2px solid black;
+}
+
+p{
+	color: red;
+	line-height: 1.5em;
+}
+footer{
+	background-color: lightblue;
+	width: 100%;
+	text-align: center;
+	border-top: 2px solid black;
+
+}
