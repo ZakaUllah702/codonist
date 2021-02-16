@@ -247,13 +247,6 @@ font-weight: 700;
     box-shadow: none;
 }
 
-.text {
-  color: #ffc107;
-  font-size: 14px;
-  padding: 16px 32px;
-  font-weight: 400;
-  font-family: 'Titillium Web', sans-serif;
-}
 
 .middle .center-text{
     font-size: 19px;
