@@ -4,8 +4,11 @@
 */
 
 function codonist_resources(){
-
-	wp_enqueue_style('style',get_stylesheet_uri());
+	wp_enqueue_style('boot-strap','//getbootstrap.com/docs/4.0/components/card/');
+	wp_enqueue_style('boot-straps','//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
+	wp_enqueue_style('theme-js', get_theme_file_uri('/js/main.js'), NULL);
+	wp_enqueue_style('font-awesome','//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+	wp_enqueue_style('style',get_stylesheet_uri('/style.css'));
 
 }
 
@@ -133,4 +136,12 @@ register_post_type('testimonial',array(
 };
 
 add_action('init', 'codonist_testimonial_post_type');
+
+
+add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10, 3 );
+
+function remove_thumbnail_dimensions( $html, $post_id, $post_image_id ) {
+    $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+    return $html;
+}
 
