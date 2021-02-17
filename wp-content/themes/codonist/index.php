@@ -36,7 +36,7 @@ get_header();
             ?>
             <div class="col-md-4">
              <div class="card">
-               <?php echo the_post_thumbnail('full'); ?>
+               <?php echo the_post_thumbnail(); ?>
              
               <div class="card-body">
                 <h5 class="card-title"><?php the_title(); ?></h5>
@@ -91,82 +91,32 @@ get_header();
           <span class="border-box"></span>
         </span>
       </h2>
+
+      <?php 
+      $team = new WP_Query(array(
+         'posts_per_page' => -1,
+         'post_type' => 'team'
+      ));
+      ?> 
+      
       <div class="row mt-5 justify-content-center">
+      <?php
+         while($team->have_posts()){
+            $team->the_post();
+            ?>
           <div class="col-md-3">
             <div class="card">
-              <img class="card-img-top" src="<?php echo get_theme_file_uri('/img/hamayun.png') ?>" alt="Card image cap">
+              <?php echo the_post_thumbnail(); ?>
+              
               <div class="card-body">
-                <h5 class="card-title">Hamayun Aziz</h5>
-                <h6>Web Application Developer</h6>
-                <p class="card-text">He is a specialist in Web Application Development especially in SCSS, Vue.JS, Types Script, Angular, Core PHP, PHP API Development.</p>
+                <h5 class="card-title"><?php the_title(); ?></h5>
+                <p class="card-text"><?php echo wp_trim_words(get_the_content(), 20); ?></p>
               </div>
             </div>
           </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-md-3">
-          <div class="card">
-            <img class="card-img-top" src="<?php echo get_theme_file_uri('/img/arsalan.png') ?>" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Arsalan Ahmad</h5>
-              <h6>CMS Developer</h6>
-              <p class="card-text">He is an highly skilled WordPress developer. He has a lot of experience in creating and customizing WordPress themes and plugins.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img class="card-img-top" src="<?php echo get_theme_file_uri('/img/ishaq.png') ?>" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Ishaq Khan</h5>
-              <h6>Senior Website Designer</h6>
-              <p class="card-text">He is responsible for the design and management of all creative and technical design projects.   Ensure projects meet the client requirements.
-
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img class="card-img-top" src="<?php echo get_theme_file_uri('/img/shahriyar.png') ?>"  alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Shahryar Khan</h5>
-              <h6>Frontend Developer</h6>
-              <p class="card-text">He is an expert Front-end developer and also an expertise in WordPress. He has 2 years of front-end experience and a passion for responsive websites.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img class="card-img-top" src="<?php echo get_theme_file_uri('/img/avartar1.png') ?>" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Rashna Arif</h5>
-              <h6>WordPress/Frontend Developer</h6>
-              <p class="card-text">She has extensive knowledge of front-end development and also in WordPress. she is a creative web designer and builds modern websites with elegant designs.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row mt-3 justify-content-center">
-        <div class="col-md-3">
-          <div class="card">
-            <img class="card-img-top" src="<?php echo get_theme_file_uri('/img/team-leader.png') ?>" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Hamayun Khan</h5>
-              <h6>Senior Software Developer and Team Lead</h6>
-              <p class="card-text">He has an experience of more than 8 years of Project Management, Team Building, Website Development. Backend developer Php (Laravel)</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img class="card-img-top" src="<?php echo get_theme_file_uri('/img/hidayat.png') ?>" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Hidayat-ullah</h5>
-              <p class="card-text">He is an expert Front-end developer and also an expertise in WordPress. He has 2 years of front-end experience and a passion for responsive websites..</p>
-            </div>
-          </div>
-        </div>
+          <?php
+         }
+         ?>
       </div>
     </div>
 </section>
