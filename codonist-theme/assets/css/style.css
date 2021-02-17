@@ -1,10 +1,15 @@
 /*-----------Globel Classes----------*/
 
-.section-title{
-font-size: 44px;
-border-bottom: none !important;
-font-family: "Lato", Helvetica, Arial, sans-serif;
-font-weight: 700;
+.section-title {
+    position: relative;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 60px;
+    color: #64485C !important;
+    font-size: 44px;
+    border-bottom: none !important;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-weight: 700;
 }
 
 .section-title .border-line {
@@ -50,13 +55,6 @@ font-weight: 700;
     transform: translateY(-50%);
 }
 
-body {
-    background-color: #ffffff;
-    color: #333333;
-    font-family: "Lato", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-}
-
 /*---------------------------HEADER TOP------------------------------*/
 
 .header-top{
@@ -66,21 +64,21 @@ body {
     font-size: 14px;
 }
 
-.navbar-light .navbar-nav .nav-link {
+.navigation-bar .navbar-light .navbar-nav .nav-link {
     color: #ffffff;
     padding: 10px;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
+.navigation-bar  .navbar-light .navbar-nav .nav-link:hover {
     color: rgba(255,255,255,.75);
 }
 
-.search-container {
+.navigation-bar  .search-container {
     position: relative;
     border-radius: 4px;
 }
 
-.search-container .search-icon {
+.navigation-bar  .search-container .search-icon {
     position: absolute;
     left: 13px;
     top: 10px;
@@ -89,16 +87,16 @@ body {
     z-index: 0;
 }
 
-.searchform #s:focus {
+.navigation-bar  .searchform #s:focus {
     width: 150px;
     padding-right: 5px;
 }
 
-.screen-reader-text {
+.navigation-bar .screen-reader-text {
     display: none;
 }
 
-.screen-reader-text {
+.navigation-bar  .screen-reader-text {
     clip: rect(1px,1px,1px,1px);
     height: 1px;
     overflow: hidden;
@@ -107,7 +105,7 @@ body {
     word-wrap: normal!important;
 }
 
-.searchform #s {
+.navigation-bar  .searchform #s {
     width: 30px;
     padding: 5px 0 5px 35px;
     transition: all 0.4s ease;
@@ -117,7 +115,7 @@ body {
     border-radius: 5px;
 }
 
-.searchform #searchsubmit {
+.navigation-bar  .searchform #searchsubmit {
     display: none;
 }
 
@@ -134,7 +132,7 @@ body {
     max-width: 100%;
 }
 
-.hero-text {
+.hero-section .hero-text {
     position: absolute;
     text-align: center;
     color: #ffffff;
@@ -144,13 +142,13 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.hero-text h1{
+.hero-section .hero-text h1{
     font-size: 50px;
     font-family: "Lato", Helvetica, Arial, sans-serif;
     font-weight: 700;
 }
 
-.hero-text p{
+.hero-section .hero-text p{
     font-size: 22px;
     font-family: "Lato", Helvetica, Arial, sans-serif;
     font-weight: 600;
@@ -161,14 +159,6 @@ body {
 
 .services-section{
     background: #f0f0f0;
-}
-
-.section-title {
-    position: relative;
-    text-align: center;
-    padding-bottom: 15px;
-    padding-top: 60px;
-    color: #64485C !important;
 }
 
 .services-section h2 {
@@ -221,26 +211,6 @@ body {
     background-color: #64485C !important;
 }
 
-
-/*---------------------------Codonist Section------------------------------*/
-.codonists{
-    background: #f0f0f0;
-}
-
-.codonists .card {
-    text-align: center;
-    margin-top: 80px;
-    min-height: 386px;
-}
-
-.codonists .card img {
-    margin: -25% auto 0;
-    width: 200px;
-    min-height: 190px !important;
-    overflow: hidden;
-    border-radius: 50%;
-}
-
 /*---------------------------Skill Section------------------------------*/
 
 .skill-section .item{
@@ -259,42 +229,73 @@ body {
     text-align: center;
 }
 
+
+/*---------------------------Codonist Section------------------------------*/
+.codonists {
+    background: #f0f0f0;
+    margin-top: 70px;
+    padding-bottom: 70px;
+}
+
+.codonists .card-body {
+    padding: 20px 5px;
+}
+
+.codonists .card {
+    text-align: center;
+    margin-top: 80px;
+    min-height: 386px;
+}
+
+.codonists .card img {
+    margin: -25% auto 0;
+    width: 200px;
+    min-height: 190px !important;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
 /*---------------------------Works Section------------------------------*/
 
+
+.work-section{
+    padding-bottom: 70px;
+}
+
 /* Center website */
- .main {
+.work-section .main {
     max-width: 1000px;
     margin: auto;
     padding-top: 30px;
 }
 
 /* Create three equal columns that floats next to each other */
-.column {
+.work-section .column {
   float: left;
   width: 33.33%;
   display: none; /* Hide columns by default */
 }
 
 /* Clear floats after rows */
- .row:after {
+.work-section .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
 /* Content */
- .content {
+.work-section .content {
   background-color: white;
   padding: 10px;
 }
 
 /* The "show" class is added to the filtered elements */
-.show {
+.work-section .show {
   display: block;
 }
 
 /* Style the buttons */
- #myBtnContainer .btn {
+.work-section #myBtnContainer .btn {
     font-size: 15px;
     outline: none;
     padding: 3px 10px;
@@ -307,19 +308,19 @@ body {
 
 
 /* Add a dark background color to the active button */
-.btn.active {
+.work-section .btn.active {
     font-size: 16px;
     color: black;
     font-weight: 400;
     font-family: 'Titillium Web', sans-serif;
 }
 
-.btn.focus, .btn:focus {
+.work-section .btn.focus, .btn:focus {
     outline: 0;
     box-shadow: none;
 }
 
-.middle .center-text{
+.work-section .middle .center-text{
     font-size: 19px;
     color: white;
     white-space: nowrap;
@@ -327,7 +328,7 @@ body {
     font-family: 'Titillium Web', sans-serif; 
 }
 
-.middle {
+.work-section .middle {
   transition: .5s ease;
   opacity: 0;
   position: absolute;
@@ -339,17 +340,17 @@ body {
 }
 
 
-.content:hover .middle {
+.work-section .content:hover .middle {
   opacity: 1;
 }
 
-.nature:hover{
+.work-section .nature:hover{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 /*---------------------------Testimonial Section------------------------------*/
 
-.testimonial-section{
+/* .testimonial-section{
     background-image: url(../img/testimonial.png);
     background-position: center;
     background-size: cover;
@@ -358,6 +359,7 @@ body {
     position: relative;
     background-attachment: fixed;
     z-index: 999;
+    padding-bottom: 50px;
 }
 
 .testimonial-section .sub-heading {
@@ -496,17 +498,17 @@ body {
 .media-body.mt-4 {
     position: relative;
     left: 10px;
-}
+} */
 
 /* .owl-theme .owl-nav {
 
     display: none;
 } */
 
-.owl-theme .owl-dots {
+/* .owl-theme .owl-dots {
 
     display: none;
-}
+} */
 
 
 /*---------------------------Contact Us Section------------------------------*/
@@ -531,11 +533,15 @@ body {
     right: 0px;
     top: 0px;
     opacity: 2;
-    height: 100%;
+    height: 106%;
     width: 100% !important;
     position: absolute !important;
     background-color: #0e0e0ec4 !important;
 
+}
+
+.contact-form{
+    padding-bottom: 40px;
 }
 
 .contactus-section .title-1 {
@@ -584,6 +590,7 @@ body {
         color: #fff;
         position: relative;
         z-index: 999;
+        margin-top: 40px;
 }
 
 .footer-text h3 {

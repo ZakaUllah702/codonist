@@ -185,6 +185,15 @@ img.mr-3.image-fluid {
     font-size: 16px;
 }
 
+/*---------------------------Footer Section----------------------------------*/
+
+.footer .footer-row{
+    text-align: center;
+}
+
+.footer-text h3 {
+    margin-top: 20px;
+}
 
 /*---------------------------Copy Right Section------------------------------*/
 
