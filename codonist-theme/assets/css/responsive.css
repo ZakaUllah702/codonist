@@ -28,24 +28,24 @@
     font-size: 42px;
 }
 
-  #myBtnContainer .btn {
+.work-section #myBtnContainer .btn {
     font-size: 16px;
     line-height: 1.25;
     border-radius: 4px;
     margin-bottom: 10px;
 }
 
-.carousel {
+.work-section .carousel {
     margin-left: auto;
     margin-right: 20px;
 }
 
-.show {
+.work-section .show {
     display: contents;
 }
 
 
-.content img {
+.work-section .content img {
     vertical-align: middle;
     border-style: none;
     max-width: 100%;

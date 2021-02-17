@@ -257,7 +257,6 @@
 
 /*---------------------------Works Section------------------------------*/
 
-
 .work-section{
     padding-bottom: 70px;
 }
@@ -292,6 +291,10 @@
 /* The "show" class is added to the filtered elements */
 .work-section .show {
   display: block;
+}
+
+.work-section #myBtnContainer{
+    padding-bottom: 10px;
 }
 
 /* Style the buttons */
@@ -341,16 +344,22 @@
 
 
 .work-section .content:hover .middle {
-  opacity: 1;
-}
+    opacity: 1;
+  }
+  
+.work-section .content {
+      position: relative;
+      width: 100%;
+      margin-bottom: -9px;
+  }
 
-.work-section .nature:hover{
+.work-section .content img:hover{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 /*---------------------------Testimonial Section------------------------------*/
 
-/* .testimonial-section{
+.testimonial-section{
     background-image: url(../img/testimonial.png);
     background-position: center;
     background-size: cover;
@@ -366,7 +375,7 @@
     position: relative;
     padding-top: 20px !important;
     font-size: 28px !important;
-    text-align: center;
+    text-align: center; 
 }
 
 .testimonial-item {
@@ -498,17 +507,17 @@
 .media-body.mt-4 {
     position: relative;
     left: 10px;
-} */
+}
 
 /* .owl-theme .owl-nav {
 
     display: none;
 } */
 
-/* .owl-theme .owl-dots {
+.owl-theme .owl-dots {
 
     display: none;
-} */
+}
 
 
 /*---------------------------Contact Us Section------------------------------*/
