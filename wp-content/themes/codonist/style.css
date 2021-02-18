@@ -1,20 +1,16 @@
-/*
-Theme Name:Codonist
-Author: Codonist Developer
-Version: 1.0.0
-URL: codonist.com
-*/
 
 /*-----------Globel Classes----------*/
 
-.section-title{
-	font-size: 44px;
-	border-bottom: none !important;
-	font-family: "Lato", Helvetica, Arial, sans-serif;
-	font-weight: 700;
+	.section-title{
+		font-size: 44px;
+		border-bottom: none !important;
+		font-family: "Lato", Helvetica, Arial, sans-serif;
+		font-weight: 700;
+		max-width: max-content;
+		margin: 0 auto;
 	}
 	
-	.section-title .border-line {
+	.section-title .title-line {
 		position: relative;
 		display: block;
 		top: 10px;
@@ -24,7 +20,7 @@ URL: codonist.com
 		background: transparent;
 	}
 	
-	.section-title .border-line:before {
+	.section-title .title-line:before {
 		content: '';
 		width: 98px;
 		height: 6px;
@@ -35,7 +31,7 @@ URL: codonist.com
 		transform: translateY(-50%);
 	}
 	
-	.section-title .border-line .border-box {
+	.section-title .title-line .title-box {
 		position: absolute;
 		top: 0;
 		left: 44%;
@@ -46,7 +42,7 @@ URL: codonist.com
 		transform: rotate(45deg);
 	}
 	
-	.section-title .border-line:after {
+	.section-title .title-line:after {
 		content: '';
 		width: 98px;
 		height: 6px;
@@ -163,7 +159,7 @@ URL: codonist.com
 	}
 	
 	/*---------------------------Services Section------------------------------*/
-	
+
 	.single-service-page-img{
 		text-align: center;
 		margin-top: 10px;
@@ -269,7 +265,7 @@ URL: codonist.com
 		height: 100%;
 	}
 	
-	.skill-section .skill-type{
+	.skill-section .skill-type {
 		font-size: 20px;
 		margin-top: 5px;
 		text-align: center;

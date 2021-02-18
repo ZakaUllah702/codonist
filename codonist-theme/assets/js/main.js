@@ -1,4 +1,53 @@
 
+/*---------------------------Skill Section------------------------------*/
+
+/*----Uper Carousel of Skill Section----*/
+
+$('.first').owlCarousel({
+  rtl:false,
+  loop:true,
+  margin:10,
+  autoplay:true,
+  autoplayTimeout:3000,
+  smartSpeed:1000,
+  nav:false,
+  responsive:{
+      0:{
+          items:3
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:6
+      }
+  }
+})
+
+/*----Lower Carousel of Skill Section-----*/
+$('.second').owlCarousel({
+  rtl:true,
+  loop:true,
+  margin:10,
+  nav:false,
+  smartSpeed:1000,
+  autoplay:true,
+  autoplayTimeout:3000,
+  responsive:{
+      0:{
+          items:3
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:6
+      }
+  }
+})
+
+
+
 /*---------------------------Works Section------------------------------*/
 filterSelection("all")
 function filterSelection(c) {
@@ -44,61 +93,15 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-/*---------------------------Skill Section------------------------------*/
-$('.first').owlCarousel({
-  rtl:false,
-  loop:true,
-  margin:10,
-  autoplay:true,
-  autoplayTimeout:3000,
-  smartSpeed:1000,
-  nav:false,
-  responsive:{
-      0:{
-          items:3
-      },
-      600:{
-          items:3
-      },
-      1000:{
-          items:6
-      }
-  }
-})
-
-
-$('.second').owlCarousel({
-  rtl:true,
-  loop:true,
-  margin:10,
-  nav:false,
-  smartSpeed:1000,
-  autoplay:true,
-  autoplayTimeout:3000,
-  responsive:{
-      0:{
-          items:3
-      },
-      600:{
-          items:3
-      },
-      1000:{
-          items:6
-      }
-  }
-})
-
-
-
 /*---------------------------Testimonial Section------------------------------*/
 
-
+/*-----Carousel of Testimonial Section------*/
 $('.owl-carousel').owlCarousel({
   loop:true,
   margin:10,
   nav:false,
   smartSpeed:1000,
-  autoplay:true,
+  // autoplay:true,
   autoplayTimeout:4000,
   responsive:{
       0:{
@@ -112,3 +115,5 @@ $('.owl-carousel').owlCarousel({
       }
   }
 })
+
+/*-----The End------*/
