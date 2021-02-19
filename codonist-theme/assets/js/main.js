@@ -1,5 +1,57 @@
 
+/*---------------------------Skill Section------------------------------*/
+
+/*----Uper Carousel of Skill Section----*/
+
+$('.first').owlCarousel({
+  rtl:false,
+  loop:true,
+  margin:10,
+  autoplay:true,
+  autoplayTimeout:3000,
+  smartSpeed:1000,
+  nav:false,
+  responsive:{
+      0:{
+          items:3
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:6
+      }
+  }
+})
+
+/*----Lower Carousel of Skill Section-----*/
+
+$('.second').owlCarousel({
+  rtl:true,
+  loop:true,
+  margin:10,
+  nav:false,
+  smartSpeed:1000,
+  autoplay:true,
+  autoplayTimeout:3000,
+  responsive:{
+      0:{
+          items:3
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:6
+      }
+  }
+})
+
+
+
 /*---------------------------Works Section------------------------------*/
+
+
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
@@ -13,7 +65,7 @@ function filterSelection(c) {
 
 function w3AddClass(element, name) {
   var i, arr1, arr2;
-  arr1 = element.className.split(" ");
+  arr1 = element.className.split("  ");
   arr2 = name.split(" ");
   for (i = 0; i < arr2.length; i++) {
     if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
@@ -44,54 +96,10 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-/*---------------------------Skill Section------------------------------*/
-$('.first').owlCarousel({
-  rtl:false,
-  loop:true,
-  margin:10,
-  autoplay:true,
-  autoplayTimeout:3000,
-  smartSpeed:1000,
-  nav:false,
-  responsive:{
-      0:{
-          items:3
-      },
-      600:{
-          items:3
-      },
-      1000:{
-          items:6
-      }
-  }
-})
-
-
-$('.second').owlCarousel({
-  rtl:true,
-  loop:true,
-  margin:10,
-  nav:false,
-  smartSpeed:1000,
-  autoplay:true,
-  autoplayTimeout:3000,
-  responsive:{
-      0:{
-          items:3
-      },
-      600:{
-          items:3
-      },
-      1000:{
-          items:6
-      }
-  }
-})
-
-
 
 /*---------------------------Testimonial Section------------------------------*/
 
+/*-----Carousel of Testimonial Section------*/
 
 $('.owl-carousel').owlCarousel({
   loop:true,
@@ -112,3 +120,5 @@ $('.owl-carousel').owlCarousel({
       }
   }
 })
+
+/*-----The End------*/

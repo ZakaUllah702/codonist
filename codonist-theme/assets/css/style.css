@@ -257,7 +257,6 @@
 
 /*---------------------------Works Section------------------------------*/
 
-
 .work-section{
     padding-bottom: 70px;
 }
@@ -292,6 +291,10 @@
 /* The "show" class is added to the filtered elements */
 .work-section .show {
   display: block;
+}
+
+.work-section #myBtnContainer{
+    padding-bottom: 10px;
 }
 
 /* Style the buttons */
@@ -341,16 +344,26 @@
 
 
 .work-section .content:hover .middle {
-  opacity: 1;
-}
+    opacity: 1;
+  }
+  
+.work-section .content {
+      position: relative;
+      width: 100%;
+      margin-bottom: -9px;
+  }
 
-.work-section .nature:hover{
+.work-section .content img:hover{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 /*---------------------------Testimonial Section------------------------------*/
 
+<<<<<<< HEAD
  .testimonial-section{
+=======
+.testimonial-section{
+>>>>>>> 0bd4965264b197fd6b90d5d73a5244b0f1a580b4
     background-image: url(../img/testimonial.png);
     background-position: center;
     background-size: cover;
@@ -366,7 +379,7 @@
     position: relative;
     padding-top: 20px !important;
     font-size: 28px !important;
-    text-align: center;
+    text-align: center; 
 }
 
 .testimonial-item {
@@ -422,19 +435,19 @@
 
 .testimonial-image .img_client_testimonial {
     position: relative;
-    left: -49px;
+    left: -25px;
 }
 
 .testimonial-item .media:before {
     content: '';
     position: absolute;
-    width: 130px;
-    height: 155px;
+    width: 90px;
+    height: 149px;
     background: #406b4000;
     z-index: 0;
     left: -38px;
     bottom: 0;
-    top: -19px;
+    top: -15px;
     border: 1px solid #fff;
 }
 
@@ -498,17 +511,21 @@
 .media-body.mt-4 {
     position: relative;
     left: 10px;
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> 0bd4965264b197fd6b90d5d73a5244b0f1a580b4
 
 /* .owl-theme .owl-nav {
 
     display: none;
 } */
 
-/* .owl-theme .owl-dots {
+.owl-theme .owl-dots {
 
     display: none;
-} */
+}
 
 
 /*---------------------------Contact Us Section------------------------------*/

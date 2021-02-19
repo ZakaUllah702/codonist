@@ -158,6 +158,7 @@ get_header();
               
               <div class="card-body">
                 <h5 class="card-title"><?php the_title(); ?></h5>
+                
                 <p class="card-text"><?php echo wp_trim_words(get_the_content(), 20); ?></p>
               </div>
             </div>
