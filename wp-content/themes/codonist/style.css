@@ -439,12 +439,12 @@
 		content: '';
 		position: absolute;
 		width: 130px;
-		height: 155px;
+		height: 132px;
 		background: #406b4000;
 		z-index: 0;
 		left: -38px;
 		bottom: 0;
-		top: -19px;
+		top: -6px;
 		border: 1px solid #fff;
 	}
 	
@@ -509,11 +509,6 @@
 		position: relative;
 		left: 10px;
 	}
-	
-	/* .owl-theme .owl-nav {
-	
-		display: none;
-	} */
 	
 	.owl-theme .owl-dots {
 	
