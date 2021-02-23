@@ -40,20 +40,21 @@ get_header();
              <div class="card">
                <?php echo the_post_thumbnail(); ?>
              
-              <div class="card-body">
-                <h5 class="card-title"><?php the_title(); ?></h5>
-                <p class="blog-text"><?php echo wp_trim_words(get_the_content(), 28); ?> </p>
-              </div>
-              <div class="sevices-btn">
-                <a href="<?php the_permalink(); ?>"><button class="btn btn-primary">Read More</button></a> 
-                <a href="#"><button class="btn btn-primary">Order Now</button></a> 
-              </div>
-               </div> 
-               </div>
+                <div class="card-body">
+                  <h5 class="card-title"><?php the_title(); ?></h5>
+                  <p class="blog-text"><?php echo wp_trim_words(get_the_content(), 28); ?> </p>
+                </div>
+                <div class="sevices-btn">
+                  <a href="<?php the_permalink(); ?>"><button class="btn btn-primary">Read More</button></a> 
+                  <a href="#"><button class="btn btn-primary">Order Now</button></a> 
+                </div>
+             </div> 
+          </div>
          <?php
          }
          ?>  
-      </div>
+    </div>
+  </div>
 </section>
 
 <!---------------------------Skill Section------------------------------>
@@ -64,61 +65,68 @@ get_header();
       <span class="border-line">
         <span class="border-box"></span>
       </span>
-    </h2>
+   </h2>
+
     <div class="skill-carousel mt-5">
+
+      <?php 
+          $arg =array(
+            'posts_per_page' => -1,
+            'post_type' => 'skills',
+            'category_name' => 'front-end',
+          );
+          $skills = new WP_Query($arg);
+      ?>      
       <div class="owl-carousel owl-theme first">
-        <div class="item">
-          <img width="225" height="225" src="https://codonist.com/wp-content/uploads/2020/01/javascript.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2020/01/javascript.jpg 225w, https://codonist.com/wp-content/uploads/2020/01/javascript-150x150.jpg 150w, https://codonist.com/wp-content/uploads/2020/01/javascript-20x20.jpg 20w, https://codonist.com/wp-content/uploads/2020/01/javascript-100x100.jpg 100w" sizes="(max-width: 225px) 100vw, 225px">
-          <h4 class="skill-type"> Jawa Script </h4>
-        </div>
-        <div class="item">
-          <img width="256" height="256" src="https://codonist.com/wp-content/uploads/2020/01/icons8-less-logo-256.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2020/01/icons8-less-logo-256.png 256w, https://codonist.com/wp-content/uploads/2020/01/icons8-less-logo-256-150x150.png 150w, https://codonist.com/wp-content/uploads/2020/01/icons8-less-logo-256-20x20.png 20w, https://codonist.com/wp-content/uploads/2020/01/icons8-less-logo-256-100x100.png 100w" sizes="(max-width: 256px) 100vw, 256px">
-          <h4 class="skill-type">LESS</h4>
-        </div>
-        <div class="item">
-          <img width="256" height="256" src="https://codonist.com/wp-content/uploads/2020/01/sass.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2020/01/sass.png 256w, https://codonist.com/wp-content/uploads/2020/01/sass-150x150.png 150w, https://codonist.com/wp-content/uploads/2020/01/sass-20x20.png 20w, https://codonist.com/wp-content/uploads/2020/01/sass-100x100.png 100w" sizes="(max-width: 256px) 100vw, 256px">
-          <h4 class="skill-type">SAAS</h4>
-        </div>
-        <div class="item">
-          <img width="256" height="256" src="https://codonist.com/wp-content/uploads/2020/01/css-3.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2020/01/css-3.png 256w, https://codonist.com/wp-content/uploads/2020/01/css-3-150x150.png 150w, https://codonist.com/wp-content/uploads/2020/01/css-3-20x20.png 20w, https://codonist.com/wp-content/uploads/2020/01/css-3-100x100.png 100w" sizes="(max-width: 256px) 100vw, 256px">
-          <h4 class="skill-type">CSS3</h4>
-        </div>
-        <div class="item">
-          <img width="256" height="256" src="https://codonist.com/wp-content/uploads/2020/01/html5-1.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2020/01/html5-1.png 256w, https://codonist.com/wp-content/uploads/2020/01/html5-1-150x150.png 150w, https://codonist.com/wp-content/uploads/2020/01/html5-1-20x20.png 20w, https://codonist.com/wp-content/uploads/2020/01/html5-1-100x100.png 100w" sizes="(max-width: 256px) 100vw, 256px">
-          <h4 class="skill-type">HTML</h4>
-        </div>
-        <div class="item">
-          <img width="256" height="256" src="https://codonist.com/wp-content/uploads/2020/01/iconfinder_JQuery_logo_282806.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2020/01/iconfinder_JQuery_logo_282806.png 256w, https://codonist.com/wp-content/uploads/2020/01/iconfinder_JQuery_logo_282806-150x150.png 150w, https://codonist.com/wp-content/uploads/2020/01/iconfinder_JQuery_logo_282806-20x20.png 20w, https://codonist.com/wp-content/uploads/2020/01/iconfinder_JQuery_logo_282806-100x100.png 100w" sizes="(max-width: 256px) 100vw, 256px">
-          <h4 class="skill-type">jquery</h4>
-        </div>
-      </div>
-        <div class="owl-carousel owl-theme second">
-            <div class="item">
-              <img width="480" height="480" src="https://codonist.com/wp-content/uploads/2020/01/icons8-bootstrap-480.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2020/01/icons8-bootstrap-480.png 480w, https://codonist.com/wp-content/uploads/2020/01/icons8-bootstrap-480-300x300.png 300w, https://codonist.com/wp-content/uploads/2020/01/icons8-bootstrap-480-150x150.png 150w, https://codonist.com/wp-content/uploads/2020/01/icons8-bootstrap-480-20x20.png 20w, https://codonist.com/wp-content/uploads/2020/01/icons8-bootstrap-480-100x100.png 100w" sizes="(max-width: 480px) 100vw, 480px">
-              <h4 class="skill-type">Bootstrap</h4>
-            </div>
-            <div class="item">
-              <img width="256" height="256" src="https://codonist.com/wp-content/uploads/2020/01/Typescript.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2020/01/Typescript.png 256w, https://codonist.com/wp-content/uploads/2020/01/Typescript-150x150.png 150w, https://codonist.com/wp-content/uploads/2020/01/Typescript-20x20.png 20w, https://codonist.com/wp-content/uploads/2020/01/Typescript-100x100.png 100w" sizes="(max-width: 256px) 100vw, 256px">
-              <h4 class="skill-type">Typescript</h4>
-            </div>
-            <div class="item">
-              <img width="480" height="480" src="https://codonist.com/wp-content/uploads/2020/01/icons8-git-480.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2020/01/icons8-git-480.png 480w, https://codonist.com/wp-content/uploads/2020/01/icons8-git-480-300x300.png 300w, https://codonist.com/wp-content/uploads/2020/01/icons8-git-480-150x150.png 150w, https://codonist.com/wp-content/uploads/2020/01/icons8-git-480-20x20.png 20w, https://codonist.com/wp-content/uploads/2020/01/icons8-git-480-100x100.png 100w" sizes="(max-width: 480px) 100vw, 480px">
-              <h4 class="skill-type">Git</h4>
-            </div>
-            <div class="item">
-              <img width="256" height="256" src="https://codonist.com/wp-content/uploads/2020/01/php.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2020/01/php.png 256w, https://codonist.com/wp-content/uploads/2020/01/php-150x150.png 150w, https://codonist.com/wp-content/uploads/2020/01/php-20x20.png 20w, https://codonist.com/wp-content/uploads/2020/01/php-100x100.png 100w" sizes="(max-width: 256px) 100vw, 256px">
-              <h4 class="skill-type">PHP</h4>
+      <?php
+        if ( $skills->have_posts() ){
+          
+            while($skills->have_posts()){
+              $skills->the_post();
+              $featured_img_url = get_the_post_thumbnail_url();
+          ?>
+
+          <div class="item">
+            <img width="225" height="225" src="<?php echo $featured_img_url ?>" sizes="(max-width: 225px) 100vw, 225px">
+            <h4 class="skill-type"><?php the_title(); ?></h4>
           </div>
-            <div class="item">
-              <img width="256" height="256" src="https://codonist.com/wp-content/uploads/2020/01/Wordpress.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2020/01/Wordpress.png 256w, https://codonist.com/wp-content/uploads/2020/01/Wordpress-150x150.png 150w, https://codonist.com/wp-content/uploads/2020/01/Wordpress-20x20.png 20w, https://codonist.com/wp-content/uploads/2020/01/Wordpress-100x100.png 100w" sizes="(max-width: 256px) 100vw, 256px">
-              <h4 class="skill-type">Wordpress</h4>
-            </div>
-            <div class="item">
-              <img width="480" height="480" src="https://codonist.com/wp-content/uploads/2020/01/icons8-vue-js-480.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2020/01/icons8-vue-js-480.png 480w, https://codonist.com/wp-content/uploads/2020/01/icons8-vue-js-480-300x300.png 300w, https://codonist.com/wp-content/uploads/2020/01/icons8-vue-js-480-150x150.png 150w, https://codonist.com/wp-content/uploads/2020/01/icons8-vue-js-480-20x20.png 20w, https://codonist.com/wp-content/uploads/2020/01/icons8-vue-js-480-100x100.png 100w" sizes="(max-width: 480px) 100vw, 480px">
-              <h4 class="skill-type">Vue Js</h4>
-            </div>
-        </div>
-    </div>
+           
+          <?php
+          }
+        }
+          ?>
+      </div>
+
+
+      <?php 
+          $arg =array(
+            'posts_per_page' => -1,
+            'post_type' => 'skills',
+            'category_name' => 'back-end',
+          );
+          $skills = new WP_Query($arg);
+      ?>      
+      <div class="owl-carousel owl-theme second">
+      <?php
+        if ( $skills->have_posts() ){
+          
+            while($skills->have_posts()){
+              $skills->the_post();
+              $featured_img_url = get_the_post_thumbnail_url();
+          ?>
+
+          <div class="item">
+            <img width="225" height="225" src="<?php echo $featured_img_url ?>" sizes="(max-width: 225px) 100vw, 225px">
+            <h4 class="skill-type"><?php the_title(); ?></h4>
+          </div>
+           
+          <?php
+          }
+        }
+          ?>
+      </div>
+     
+    </div>  
   </div>
 </section>
 
@@ -438,7 +446,8 @@ get_header();
 <!---------------------------Contact Us Section------------------------------>
 
 <section class="contactus-section">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6780.562102591999!2d70.8950859757437!3d31.81733842508929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39266ddba2d5d961%3A0x2259f5b5db747d9d!2sBasti%20Ustrana%20(Northern)%2C%20Dera%20Ismail%20Khan%2C%20Khyber%20Pakhtunkhwa!5e0!3m2!1sen!2s!4v1613386490635!5m2!1sen!2s" width="100%" height="675" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3390.1990283016175!2d70.89704241449121!3d31.819572539491592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39266d55f80b5d89%3A0x9510081386df7b28!2sCodonist%20Software%20House!5e0!3m2!1sen!2s!4v1613546370716!5m2!1sen!2s" width="100%" height="756" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    
     <div class="layout">
     </div>
   <div class="container">
