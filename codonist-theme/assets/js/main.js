@@ -18,6 +18,12 @@ $('.first').owlCarousel({
       600:{
           items:3
       },
+      700:{
+          items:4
+      },
+      992:{
+          items:5
+      },
       1000:{
           items:6
       }
@@ -40,6 +46,12 @@ $('.second').owlCarousel({
       },
       600:{
           items:3
+      },
+      700:{
+          items:4
+      },
+      992:{
+          items:5
       },
       1000:{
           items:6
