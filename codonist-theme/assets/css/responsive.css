@@ -1,3 +1,1033 @@
+
+@media (max-width: 1199px) and (min-width: 1024px) {
+
+    .hero-section {
+        min-height: 440px;
+    }
+    
+    .hero-section .hero-text h1 {
+        font-size: 58px;
+    }
+    
+    .hero-section .hero-text p {
+        font-size: 28px;
+        margin-top: 30px;
+    }
+    
+    /*---------------------------Services Section------------------------------*/
+    
+    .services-section .card-body .blog-text {
+        font-size: 15px;
+        text-align: justify;
+    }
+    
+    .services-section .card-body .card-title {
+        font-size: 24px;
+    }
+    
+    /*---------------------------Codonist Section------------------------------*/
+    
+    .card-text {
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    
+    .codonists .card img {
+        margin: -25% auto 0;
+        width: 140px;
+        min-height: 140px !important;
+    }
+    
+    .codonists .card {
+        margin-top: 48px;
+        width: 200px;
+        min-height: 376px;
+    }
+    
+    .card-title {
+        font-size: 20px;
+    }
+    
+    .card-body h6{
+        font-size: 14px;
+    }
+    
+    /*---------------------------Works Section------------------------------*/
+    
+    
+    .work-section .section-title{
+        font-size: 42px;
+    }
+    
+    .work-section #myBtnContainer .btn {
+        font-size: 16px;
+        line-height: 1.25;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+    
+    .work-section .carousel {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+    
+    .work-section .show {
+        display: block;
+    }
+    
+    
+    .work-section .content img {
+        vertical-align: middle;
+        border-style: none;
+        max-width: 100%;
+    }
+    
+    /*---------------------------Testimonial Section------------------------------*/
+    
+        .testimonial-section .sub-heading{
+            font-size: 30px !important;
+        }
+    
+        .inner-content .icon-left{
+            left: -45px;
+            top: -30px;
+        }
+    
+        .inner-content .icon-left i {
+            font-size: 40px;
+        }
+    
+        .inner-content p {
+            position: absolute;
+            text-align: justify !important;
+            font-size: 28px;
+            font-weight: initial;
+            font-family: inherit;
+            left: 1px; 
+            top: 150px;
+            height: 0;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+    
+        .inner-content .icon-right i {
+            bottom: 85px;
+            font-size: 40px;
+            right: 20px;
+        }
+    
+        .testimonial-item {
+            height: 380px;
+        }
+    
+        .testimonial-item .media:before {
+            width: 70px;
+            height: 104px;
+            left: -71px;
+            top: -8px;
+        }
+    
+        .testimonial-image {
+            bottom: -20%;
+            left: 38%;
+            top: 84%;
+        }
+    
+    
+        .testimonial-image .img_client_testimonial {
+            left: -62px;
+        }
+    
+        .testimonial-image img {
+            width: 88px !important;
+            height: 88px;
+            z-index: 0;
+        }
+    
+        .media-body.mt-4 {
+            font-size: 14px;
+            top: -5px;
+        }
+    
+        .media-body h5.mt-0 {
+            font-size: 18px;
+        }
+    
+        .testimonial-item:before, .testimonial-item:after {
+            content: '';
+            width: 32%;
+            position: absolute;
+            height: 1px;
+            z-index: 1;
+            background-color: #fff;
+        }
+    
+    
+    /*---------------------------Contact Us Section------------------------------*/
+    
+        .contactus-section .title-1 {
+            font-size: 40px;
+            font-weight: 700;
+        }
+    
+        .contactus-section .title-2{
+            font-size: 25px;
+        }
+    
+    /*---------------------------Footer Section----------------------------------*/
+        
+            .footer-text h3 {
+                margin-top: 20px;
+            }
+    
+            .widgets {
+                font-size: 14px;
+                text-align: initial;
+            }
+
+}
+@media (max-width: 1023px) and (min-width: 992px) {
+
+    
+/*---------------------------Hero Section------------------------------*/
+
+.hero-section {
+    min-height: 400px;
+}
+
+.hero-section .hero-text h1 {
+    font-size: 56px;
+}
+
+.hero-section .hero-text p {
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+/*---------------------------Services Section------------------------------*/
+
+.services-section .card-body .blog-text {
+    font-size: 15px;
+    text-align: justify;
+}
+
+.services-section .card-body .card-title {
+    font-size: 24px;
+}
+
+/*---------------------------Codonist Section------------------------------*/
+
+.card-text {
+    font-size: 15px;
+    text-align: justify;
+}
+
+
+.codonists .card img {
+    margin: -25% auto 0;
+    width: 140px;
+    min-height: 140px !important;
+}
+
+.codonists .card {
+    margin-top: 48px;
+    width: 200px;
+    min-height: 340px;
+}
+
+.card-title {
+    font-size: 18px;
+}
+
+.card-body h6{
+    font-size: 11px;
+}
+
+/*---------------------------Works Section------------------------------*/
+
+
+.work-section .section-title{
+    font-size: 42px;
+}
+
+.work-section #myBtnContainer .btn {
+    font-size: 16px;
+    line-height: 1.25;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.work-section .carousel {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.work-section .show {
+    display: block;
+}
+
+
+.work-section .content img {
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+}
+
+/*---------------------------Testimonial Section------------------------------*/
+
+    .testimonial-section .sub-heading{
+        font-size: 40px !important;
+    }
+
+    .inner-content .icon-left{
+        left: -45px;
+        top: -30px;
+    }
+
+    .inner-content .icon-left i {
+        font-size: 40px;
+    }
+
+    .inner-content p {
+        position: absolute;
+        text-align: justify !important;
+        font-size: 25px;
+        font-weight: initial;
+        font-family: inherit;
+        left: 1px; 
+        top: 110px;
+        height: 0;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .inner-content .icon-right i {
+        bottom: 85px;
+        font-size: 40px;
+        right: 20px;
+    }
+
+    .testimonial-item {
+        height: 300px;
+    }
+
+    .testimonial-item .media:before {
+        width: 55px;
+        height: 100px;
+        left: -27px;
+        top: -5px;
+    }
+
+    .testimonial-image {
+        bottom: -20%;
+        left: 38%;
+    }
+
+
+    .testimonial-image .img_client_testimonial {
+        left: -21px;
+    }
+
+    .testimonial-image img {
+        width: 88px !important;
+        height: 88px;
+        z-index: 0;
+    }
+
+    .media-body.mt-4 {
+        font-size: 13px;
+        top: -5px;
+    }
+
+    .media-body h5.mt-0 {
+        font-size: 15px;
+    }
+
+    .testimonial-item:before, .testimonial-item:after {
+        content: '';
+        width: 37%;
+        position: absolute;
+        height: 1px;
+        z-index: 1;
+        background-color: #fff;
+    }
+
+
+    /*---------------------------Contact Us Section------------------------------*/
+
+    .contactus-section .title-1 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .contactus-section .title-2{
+        font-size: 25px;
+    }
+
+/*---------------------------Footer Section----------------------------------*/
+    
+        .footer-text h3 {
+            margin-top: 20px;
+        }
+
+        .widgets {
+            font-size: 14px;
+            text-align: initial;
+        }
+
+}
+
+
+@media (max-width: 991px) and (min-width: 768px) {
+
+/*---------------------------Hero Section------------------------------*/
+
+.hero-section {
+    min-height: 320px;
+}
+
+.hero-section .hero-text h1 {
+    font-size: 48px;
+}
+
+.hero-section .hero-text p {
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+/*---------------------------Services Section------------------------------*/
+
+.services-section .card-body .blog-text {
+    font-size: 11px;
+    text-align: center;
+}
+
+.services-section .card-body .card-title {
+    font-size: 17px;
+}
+
+/*---------------------------Codonist Section------------------------------*/
+
+.card-text {
+    font-size: 15px;
+    text-align: justify;
+}
+
+
+.codonists .card img {
+    margin: -25% auto 0;
+    width: 140px;
+    min-height: 140px !important;
+}
+
+.codonists .card {
+    margin-top: 48px;
+    width: 170px;
+    min-height: 370px;
+}
+
+.card-title {
+    font-size: 18px;
+}
+
+.card-body h6{
+    font-size: 11px;
+}
+
+/*---------------------------Works Section------------------------------*/
+
+
+.work-section .section-title{
+    font-size: 42px;
+}
+
+.work-section #myBtnContainer .btn {
+    font-size: 16px;
+    line-height: 1.25;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.work-section .carousel {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.work-section .show {
+    display: block;
+}
+
+
+.work-section .content img {
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+}
+
+/*---------------------------Testimonial Section------------------------------*/
+
+    .testimonial-section .sub-heading{
+        font-size: 40px !important;
+    }
+
+    .inner-content .icon-left{
+        left: -45px;
+        top: -30px;
+    }
+
+    .inner-content .icon-left i {
+        font-size: 30px;
+    }
+
+    .inner-content p {
+        position: absolute;
+        text-align: justify !important;
+        font-size: 20px;
+        font-weight: initial;
+        font-family: inherit;
+        left: 1px; 
+        top: 110px;
+        height: 0;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .inner-content .icon-right i {
+        bottom: 85px;
+        font-size: 30px;
+        right: 20px;
+    }
+
+    .testimonial-item {
+        height: 300px;
+    }
+
+    .testimonial-item .media:before {
+        width: 55px;
+        height: 100px;
+        left: -64px;
+        top: -5px;
+    }
+
+    .testimonial-image {
+        bottom: -20%;
+        left: 38%;
+    }
+
+
+    .testimonial-image .img_client_testimonial {
+        left: -58px;
+    }
+
+    .testimonial-image img {
+        width: 88px !important;
+        height: 88px;
+        z-index: 0;
+    }
+
+    .media-body.mt-4 {
+        font-size: 13px;
+        top: -12px;
+        left: -35px;
+    }
+
+    .media-body h5.mt-0 {
+        font-size: 15px;
+    }
+
+    .testimonial-item:before, .testimonial-item:after {
+        content: '';
+        width: 31%;
+        position: absolute;
+        height: 1px;
+        z-index: 1;
+        background-color: #fff;
+    }
+
+
+    /*---------------------------Contact Us Section------------------------------*/
+
+    .contactus-section .title-1 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .contactus-section .title-2{
+        font-size: 25px;
+    }
+
+/*---------------------------Footer Section----------------------------------*/
+    
+        .footer-text h3 {
+            margin-top: 20px;
+        }
+
+        .widgets {
+            font-size: 14px;
+            text-align: initial;
+        }
+
+}
+
+
+
+@media (max-width: 767px) and (min-width: 685px) {
+
+
+/*---------------------------Hero Section------------------------------*/
+
+.hero-section {
+    min-height: 290px;
+}
+
+.hero-section .hero-text h1 {
+    font-size: 43px;
+}
+
+.hero-section .hero-text p {
+    font-size: 23px;
+    margin-top: 20px;
+}
+
+/*---------------------------Services Section------------------------------*/
+
+.services-section .card-body .blog-text {
+    font-size: 16px;
+    text-align: center;
+}
+
+/*---------------------------Codonist Section------------------------------*/
+
+.card-text {
+    font-size: 16px;
+    text-align: justify;
+}
+
+
+.codonists .card img {
+    margin: -13% auto 0;
+}
+
+
+/*---------------------------Works Section------------------------------*/
+
+
+.work-section .section-title{
+    font-size: 42px;
+}
+
+.work-section #myBtnContainer .btn {
+    font-size: 16px;
+    line-height: 1.25;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.work-section .carousel {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.work-section .show {
+    display: contents;
+}
+
+
+.work-section .content img {
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+}
+
+/*---------------------------Testimonial Section------------------------------*/
+
+
+    .inner-content .icon-left{
+        left: -45px;
+        top: -30px;
+    }
+
+    .inner-content .icon-left i {
+        font-size: 30px;
+    }
+
+    .inner-content p {
+        position: absolute;
+        text-align: justify !important;
+        font-size: 18px;
+        font-weight: initial;
+        font-family: inherit;
+        left: 1px; 
+        top: 110px;
+        height: 0;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .inner-content .icon-right i {
+        bottom: 85px;
+        font-size: 30px;
+        right: 20px;
+    }
+
+    .testimonial-item {
+        height: 300px;
+    }
+
+    .testimonial-item .media:before {
+        width: 55px;
+        height: 100px;
+        left: -64px;
+        top: -5px;
+    }
+
+    .testimonial-image {
+        bottom: -20%;
+        left: 38%;
+    }
+
+
+    .testimonial-image .img_client_testimonial {
+        left: -58px;
+    }
+
+    .testimonial-image img {
+        width: 88px !important;
+        height: 88px;
+        z-index: 0;
+    }
+
+    .media-body.mt-4 {
+        font-size: 13px;
+        top: -12px;
+        left: -35px;
+    }
+
+    .media-body h5.mt-0 {
+        font-size: 15px;
+    }
+
+    .testimonial-item:before, .testimonial-item:after {
+        content: '';
+        width: 29%;
+        position: absolute;
+        height: 1px;
+        z-index: 1;
+        background-color: #fff;
+    }
+
+
+    /*---------------------------Contact Us Section------------------------------*/
+
+
+    .contactus-section .title-2{
+        font-size: 15px;
+    }
+
+/*---------------------------Footer Section----------------------------------*/
+
+        .footer .footer-row{
+            text-align: center;
+        }
+    
+        .footer-text h3 {
+            margin-top: 20px;
+        }
+}
+
+
+
+@media (max-width: 684px) and (min-width: 568px) {
+
+
+/*---------------------------Hero Section------------------------------*/
+
+.hero-section {
+    min-height: 275px;
+}
+
+.hero-section .hero-text h1 {
+    font-size: 35px;
+}
+
+.hero-section .hero-text p {
+    font-size: px;
+    margin-top: 20px;
+}
+
+/*---------------------------Services Section------------------------------*/
+
+.services-section .card-body .blog-text {
+    font-size: 16px;
+    text-align: center;
+}
+
+/*---------------------------Codonist Section------------------------------*/
+
+.card-text {
+    font-size: 16px;
+    text-align: justify;
+}
+
+
+.codonists .card img {
+    margin: -13% auto 0;
+}
+
+
+/*---------------------------Testimonial Section------------------------------*/
+
+
+    .inner-content .icon-left{
+        left: -45px;
+        top: -30px;
+    }
+
+    .inner-content .icon-left i {
+        font-size: 30px;
+    }
+
+    .inner-content p {
+        position: absolute;
+        text-align: justify !important;
+        font-size: 18px;
+        font-weight: initial;
+        font-family: inherit;
+        left: 1px; 
+        top: 110px;
+        height: 0;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .inner-content .icon-right i {
+        bottom: 85px;
+        font-size: 30px;
+        right: 20px;
+    }
+
+    .testimonial-item {
+        height: 300px;
+    }
+
+    .testimonial-item .media:before {
+        width: 55px;
+        height: 100px;
+        left: -64px;
+        top: -5px;
+    }
+
+    .testimonial-image {
+        bottom: -20%;
+        left: 38%;
+    }
+
+
+    .testimonial-image .img_client_testimonial {
+        left: -58px;
+    }
+
+    .testimonial-image img {
+        width: 88px !important;
+        height: 88px;
+        z-index: 0;
+    }
+
+    .media-body.mt-4 {
+        font-size: 13px;
+        top: -12px;
+        left: -35px;
+    }
+
+    .media-body h5.mt-0 {
+        font-size: 15px;
+    }
+
+    .testimonial-item:before, .testimonial-item:after {
+        content: '';
+        width: 29%;
+        position: absolute;
+        height: 1px;
+        z-index: 1;
+        background-color: #fff;
+    }
+
+    /*---------------------------Contact Us Section------------------------------*/
+
+
+    .contactus-section .title-2{
+        font-size: 16px;
+    }
+
+/*---------------------------Footer Section----------------------------------*/
+
+        .footer .footer-row{
+            text-align: center;
+        }
+    
+        .footer-text h3 {
+            margin-top: 20px;
+        }
+
+
+}
+
+
+
+@media (max-width: 567px) and (min-width: 480px) {
+
+/*---------------------------Hero Section------------------------------*/
+    .hero-section {
+        min-height: 275px;
+    }
+
+    .hero-section .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .hero-section .hero-text p {
+        font-size: 17px;
+        margin-top: 20px;
+    }
+
+/*---------------------------Services Section------------------------------*/
+.services-section .card-body .blog-text {
+    font-size: 16px;
+    text-align: initial;
+}
+
+
+
+/*---------------------------Works Section------------------------------*/
+
+    .work-section .show {
+        display: contents;
+    }
+
+    .work-section #myBtnContainer .btn {
+        margin-top: 6px;
+    }
+
+/*---------------------------Codonist Section------------------------------*/
+
+    .codonists .card img {
+        margin: -17% auto 0;
+    }
+
+
+/*---------------------------Testimonial Section------------------------------*/
+
+
+    .inner-content .icon-left{
+        left: -45px;
+        top: -30px;
+    }
+
+    .inner-content .icon-left i {
+        font-size: 30px;
+    }
+
+    .inner-content p {
+        position: absolute;
+        text-align: justify !important;
+        font-size: 18px;
+        font-weight: initial;
+        font-family: inherit;
+        left: 1px; 
+        top: 110px;
+        height: 0;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .inner-content .icon-right i {
+        bottom: 85px;
+        font-size: 30px;
+        right: 20px;
+    }
+
+    .testimonial-item {
+        height: 300px;
+    }
+
+    .testimonial-item .media:before {
+        width: 55px;
+        height: 100px;
+        left: -64px;
+        top: -5px;
+    }
+
+    .testimonial-image {
+        bottom: -20%;
+        left: 38%;
+    }
+
+
+    .testimonial-image .img_client_testimonial {
+        left: -58px;
+    }
+
+    .testimonial-image img {
+        width: 88px !important;
+        height: 88px;
+        z-index: 0;
+    }
+
+    .media-body.mt-4 {
+        font-size: 13px;
+        top: -12px;
+        left: -35px;
+    }
+
+    .media-body h5.mt-0 {
+        font-size: 15px;
+    }
+
+    .testimonial-item:before, .testimonial-item:after {
+        content: '';
+        width: 27%;
+        position: absolute;
+        height: 1px;
+        z-index: 1;
+        background-color: #fff;
+    }
+
+
+    /*---------------------------Footer Section----------------------------------*/
+
+    .footer .footer-row{
+        text-align: center;
+    }
+
+    .footer-text h3 {
+        margin-top: 20px;
+    }
+
+    /*---------------------------Contact Us Section------------------------------*/
+
+
+    .contactus-section .title-2{
+        font-size: 16px;
+    }
+
+    /*---------------------------Copy Right Section------------------------------*/
+
+    .copy-text {
+        font-size: 12px;
+    }
+
+
+    }
+
+
+
 @media (max-width: 479px) and (min-width: 320px) {
 
 /*---------------------------Hero Section------------------------------*/
@@ -151,10 +1181,8 @@ img.mr-3.image-fluid {
 }
 
 .inner-content .icon-left i {
-    position: absolute;
-    top: 30px;
+    top: 25px;
     font-size: 20px;
-    color: #ccc;
 }
 
 .inner-content .icon-left {
@@ -207,7 +1235,6 @@ img.mr-3.image-fluid {
 
 .copy-text {
     font-size: 13px;
-    font-weight: 500;
 }
 
 .d-flex {
