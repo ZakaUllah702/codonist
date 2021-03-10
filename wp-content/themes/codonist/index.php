@@ -15,11 +15,12 @@ get_header();
 <!---------------------------Services Section------------------------------>
    
 
-<section class="services-section">
+<section id='services' class="services-section">
   <div class="container">
+
     <h2 class="section-title Text-Dark" style="max-width:max-content;margin:0 auto">Our Services
-      <span class="border-line">
-        <span class="border-box"></span>
+      <span class="title-line">
+        <span class="title-box"></span>
       </span>
     </h2>
 
@@ -57,13 +58,13 @@ get_header();
   </div>
 </section>
 
-<!---------------------------Skill Section------------------------------>
+<!---------------------------Skill Section--------------------------->
 
-<section class="skill-section">
+<section id='skills' class="skill-section">
   <div class="container">
     <h2 class="section-title Text-Dark" style="max-width:max-content;margin:0 auto">Our Skills
-      <span class="border-line">
-        <span class="border-box"></span>
+      <span class="title-line">
+        <span class="title-box"></span>
       </span>
    </h2>
 
@@ -73,7 +74,7 @@ get_header();
           $arg =array(
             'posts_per_page' => -1,
             'post_type' => 'skills',
-            'category_name' => 'front-end',
+            'skill_categories' => 'front-end',
           );
           $skills = new WP_Query($arg);
       ?>      
@@ -87,7 +88,7 @@ get_header();
           ?>
 
           <div class="item">
-            <img width="225" height="225" src="<?php echo $featured_img_url ?>" sizes="(max-width: 225px) 100vw, 225px">
+            <img width="256" height="256" src="<?php echo $featured_img_url ?>">
             <h4 class="skill-type"><?php the_title(); ?></h4>
           </div>
            
@@ -96,16 +97,18 @@ get_header();
         }
           ?>
       </div>
-
+      
 
       <?php 
           $arg =array(
             'posts_per_page' => -1,
             'post_type' => 'skills',
-            'category_name' => 'back-end',
+            'skill_categories' => 'back-end',
           );
           $skills = new WP_Query($arg);
-      ?>      
+      ?>
+      
+      
       <div class="owl-carousel owl-theme second">
       <?php
         if ( $skills->have_posts() ){
@@ -116,7 +119,7 @@ get_header();
           ?>
 
           <div class="item">
-            <img width="225" height="225" src="<?php echo $featured_img_url ?>" sizes="(max-width: 225px) 100vw, 225px">
+            <img width="256" height="256" src="<?php echo $featured_img_url ?>">
             <h4 class="skill-type"><?php the_title(); ?></h4>
           </div>
            
@@ -132,18 +135,18 @@ get_header();
 
 <!---------------------------Codonist Section------------------------------>
 
-<section class="codonists">
+<section id='team' class="codonists">
     <div class="container">
       <h2 class="section-title Text-Dark" style="max-width:max-content;margin:0 auto">Top Codonist
-        <span class="border-line">
-          <span class="border-box"></span>
+        <span class="title-line">
+          <span class="title-box"></span>
         </span>
       </h2>
 
       <?php 
       $team = new WP_Query(array(
          'posts_per_page' => -1,
-         'post_type' => 'team'
+         'post_type' => 'team',
       ));
       ?> 
       
@@ -158,7 +161,7 @@ get_header();
               
               <div class="card-body">
                 <h5 class="card-title"><?php the_title(); ?></h5>
-                
+                <h6> <?php the_excerpt(); ?>  </h6>
                 <p class="card-text"><?php echo wp_trim_words(get_the_content(), 20); ?></p>
               </div>
             </div>
@@ -172,310 +175,342 @@ get_header();
 
 <!---------------------------Works Section------------------------------>
 
-<section class="work-section">
+<section id='work' class="work-section">
   <div class="container">
     <h2 class="section-title Text-Dark" style="max-width:max-content;margin:0 auto">Our Hardwork
-      <span class="border-line">
-        <span class="border-box"></span>
+      <span class="title-line">
+        <span class="title-box"></span>
       </span>
     </h2>
-          <!-- MAIN (Center website) -->
-          <div class="main">
+    <!-- MAIN (Center website) -->
+
+      <div class="main">
         
-            <div id="myBtnContainer">
-              <button class="btn active" onclick="filterSelection('all')"> All</button>
-              <button class="btn" onclick="filterSelection('nature')"> Angular JS</button>
-              <button class="btn" onclick="filterSelection('cars')"> PHP</button>
-              <button class="btn" onclick="filterSelection('people')"> SAAS</button>
-              <button class="btn" onclick="filterSelection('nature')">UL</button>
-              <button class="btn" onclick="filterSelection('cars')"> VueJS</button>
-              <button class="btn" onclick="filterSelection('people')">Wocommerce</button>
-              <button class="btn" onclick="filterSelection('people')">WordPress</button>
-            </div>
+              <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')"> All</button>
+                <button class="btn" onclick="filterSelection('angular')"> Angular JS</button>
+                <button class="btn" onclick="filterSelection('php')"> PHP</button>
+                <button class="btn" onclick="filterSelection('saas')"> SAAS</button>
+                <button class="btn" onclick="filterSelection('project')"> UL</button>
+                <button class="btn" onclick="filterSelection('vuejs')"> VueJS</button>
+                <button class="btn" onclick="filterSelection('woocommerce')">Wocommerce</button>
+                <button class="btn" onclick="filterSelection('wordpress')">WordPress</button>
+              </div>
   
             <!-- Portfolio Gallery Grid -->
-            <div class="row">
-                  <div class="column nature">
-                    <div class="content">
-                    <img src="<?php bloginfo('template_url'); ?> /img/watch1.jpg" style="width:334px; height:320px;">
-                          <div class="middle">
-                              <div class="center-text">WATCH</div>
-                          </div>
-                    </div>
-                  </div>
-                  <div class="column nature">
-                    <div class="content">
-                    <img src="<?php bloginfo('template_url'); ?> /img/headphone1.jpg" style="width:334px; height:320px;">
-                          <div class="middle">
-                              <div class="center-text">HEADFONE</div>
+          <div class="row">
 
-                          </div>
-                    </div>
-                  </div>
-                  <div class="column nature">
-                    <div class="content">
-                    <img src="<?php bloginfo('template_url'); ?> /img/shoe1.jpg" style="width:334px; height:320px;">
-                          <div class="middle">
-                              <div class="center-text">SHOE</div>
+          <!---------------------------Angular Filter------------------------------>
 
-                          </div>
-                    </div>
-                  </div>
-              
-                  <div class="column cars">
-                    <div class="content">
-                      <img src="<?php bloginfo('template_url'); ?> /img/camera1.jpg" style="width:334px; height:320px;">
-                          <div class="middle">
-                              <div class="center-text">CEMERA</div>
-                          </div>
-                    </div>
-                  </div>
-                  <div class="column cars">
-                    <div class="content">
-                    <img src="<?php bloginfo('template_url'); ?> /img/watch2.jpg" style="width:334px; height:320px;">
-                          <div class="middle">
-                              <div class="center-text">WATCH</div>
+                  <?php 
+                    $arg =array(
+                      'posts_per_page' => -1,
+                      'post_type' => 'projects',
+                      'project_categories' => 'angular-js',
+                    );
+                    $projects = new WP_Query($arg);
+                   ?>
+                <div class="column angular">
+                        <?php
+                        if ( $projects->have_posts() ){
+                        
+                          while($projects->have_posts()){
+                            $projects->the_post();
+                            $featured_img_url = get_the_post_thumbnail_url();
+                        ?>
 
-                          </div>
-                    </div>
-                  </div>
-                  <div class="column cars">
-                    <div class="content">
-                    <img src="<?php bloginfo('template_url'); ?> /img/headphone2.jpg" style="width:334px; height:320px;">
+                        <div class="content">
+                          <img width="334" height="320" src="<?php echo $featured_img_url ?>">
                           <div class="middle">
-                              <div class="center-text">HEADFONE</div>
+                            <h4 class="center-text"><?php the_title(); ?></h4>
+                          </div>
+                        </div>
+                        <?php
+                        }
+                      }
+                        ?>       
+                </div>
 
-                          </div>
-                    </div>
-                  </div>
-  
-                  <div class="column people">
-                    <div class="content">
-                      <img src="<?php bloginfo('template_url'); ?> /img/camera3.jpg" style="width:334px; height:320px;">
+                <!---------------------------PHP Filter------------------------------>
+
+                <?php 
+                    $arg =array(
+                      'posts_per_page' => -1,
+                      'post_type' => 'projects',
+                      'project_categories' => 'php',
+                    );
+                    $projects = new WP_Query($arg);
+                   ?>
+                <div class="column php">
+                        <?php
+                        if ( $projects->have_posts() ){
+                        
+                          while($projects->have_posts()){
+                            $projects->the_post();
+                            $featured_img_url = get_the_post_thumbnail_url();
+                        ?>
+
+                        <div class="content">
+                          <img width="334" height="320" src="<?php echo $featured_img_url ?>">
                           <div class="middle">
-                              <div class="center-text">Cemera</div>
+                            <h4 class="center-text"><?php the_title(); ?></h4>
                           </div>
-                    </div>
-                  </div>
-                  <div class="column people">
-                    <div class="content">
-                    <img src="<?php bloginfo('template_url'); ?> /img/shoe1.jpg" style="width:334px; height:320px;">
+                        </div>
+                        <?php
+                        }
+                      }
+                        ?>       
+                </div>
+
+                <!---------------------------SAAS Filter------------------------------>
+
+                <?php 
+                    $arg =array(
+                      'posts_per_page' => -1,
+                      'post_type' => 'projects',
+                      'project_categories' => 'saas',
+                    );
+                    $projects = new WP_Query($arg);
+                   ?>
+                <div class="column saas">
+                        <?php
+                        if ( $projects->have_posts() ){
+                        
+                          while($projects->have_posts()){
+                            $projects->the_post();
+                            $featured_img_url = get_the_post_thumbnail_url();
+                        ?>
+
+                        <div class="content">
+                          <img width="334" height="320" src="<?php echo $featured_img_url ?>">
                           <div class="middle">
-                              <div class="center-text">Shoe</div>
+                            <h4 class="center-text"><?php the_title(); ?></h4>
                           </div>
-                    </div>
-                  </div>
-                  <div class="column people">
-                    <div class="content">
-                    <img src="<?php bloginfo('template_url'); ?> /img/shoe4.jpg" style="width:334px; height:320px;">
+                        </div>
+                        <?php
+                        }
+                      }
+                        ?>       
+                </div>
+
+                <!---------------------------UL Filter------------------------------>
+
+                <?php 
+                    $arg =array(
+                      'posts_per_page' => -1,
+                      'post_type' => 'projects',
+                      'project_categories' => 'ul',
+                    );
+                    $projects = new WP_Query($arg);
+                   ?>
+                <div class="column project">
+                        <?php
+                        if ( $projects->have_posts() ){
+                        
+                          while($projects->have_posts()){
+                            $projects->the_post();
+                            $featured_img_url = get_the_post_thumbnail_url();
+                        ?>
+
+                        <div class="content">
+                          <img width="334" height="320" src="<?php echo $featured_img_url ?>">
                           <div class="middle">
-                              <div class="center-text">Shoe</div>
+                            <h4 class="center-text"><?php the_title(); ?></h4>
                           </div>
-                    </div>
-                  </div>
+                        </div>
+                        <?php
+                        }
+                      }
+                        ?>       
+                </div>
+
+                <!---------------------------VUE-JS Filter------------------------------>
+
+                <?php 
+                    $arg =array(
+                      'posts_per_page' => -1,
+                      'post_type' => 'projects',
+                      'project_categories' => 'vue-js',
+                    );
+                    $projects = new WP_Query($arg);
+                   ?>
+                <div class="column vuejs">
+                        <?php
+                        if ( $projects->have_posts() ){
+                        
+                          while($projects->have_posts()){
+                            $projects->the_post();
+                            $featured_img_url = get_the_post_thumbnail_url();
+                        ?>
+
+                        <div class="content">
+                          <img width="334" height="320" src="<?php echo $featured_img_url ?>">
+                          <div class="middle">
+                            <h4 class="center-text"><?php the_title(); ?></h4>
+                          </div>
+                        </div>
+                        <?php
+                        }
+                      }
+                        ?>       
+                </div>
+
+                <!---------------------------Woo-Commerce Filter------------------------------>
+
+                <?php 
+                    $arg =array(
+                      'posts_per_page' => -1,
+                      'post_type' => 'projects',
+                      'project_categories' => 'woo-commerce',
+                    );
+                    $projects = new WP_Query($arg);
+                   ?>
+                <div class="column woocommerce">
+                        <?php
+                        if ( $projects->have_posts() ){
+                        
+                          while($projects->have_posts()){
+                            $projects->the_post();
+                            $featured_img_url = get_the_post_thumbnail_url();
+                        ?>
+
+                        <div class="content">
+                          <img width="334" height="320" src="<?php echo $featured_img_url ?>">
+                          <div class="middle">
+                            <h4 class="center-text"><?php the_title(); ?></h4>
+                          </div>
+                        </div>
+                        <?php
+                        }
+                      }
+                        ?>       
+                </div>
+
+                <!---------------------------Wordpress Filter------------------------------>
+
+                <!-- <?php 
+                    $arg =array(
+                      'posts_per_page' => -1,
+                      'post_type' => 'projects',
+                      'project_categories' => 'wordpress',
+                    );
+                    $projects = new WP_Query($arg);
+                   ?>
+                <div class="column wordpress">
+                        <?php
+                        if ( $projects->have_posts() ){
+                        
+                          while($projects->have_posts()){
+                            $projects->the_post();
+                            $featured_img_url = get_the_post_thumbnail_url();
+                        ?>
+
+                        <div class="content">
+                          <img width="334" height="320" src="<?php echo $featured_img_url ?>">
+                          <div class="middle">
+                            <h4 class="center-text"><?php the_title(); ?></h4>
+                          </div>
+                        </div>
+                        <?php
+                        }
+                      }
+                        ?>       
+                </div> -->
+                  
             <!-- END GRID -->
-            </div>
+          </div>
   
-            <!-- END MAIN -->
-            </div>
+        <!-- END MAIN -->
+    </div>
   </div>
 </section>
 
 <!---------------------------Testimonial Section------------------------------>
 
-<section class="testimonial-section">
+<section id='testimonial' class="testimonial-section">
   <div class="container">
-      <h2 class="section-title Text-Dark" style="max-width:max-content;margin:0 auto">Testimonial
-        <span class="border-line">
-          <span class="border-box"></span>
+      <h2 class="section-title">Testimonial
+        <span class="title-line">
+          <span class="title-box"></span>
         </span>
       </h2>
       <h2 class="sub-heading responsive-sub-heading">Helping Our Customers to Succeed in their Business Goals</h2>
+
       <div class="testimonial-carousel owl-carousel owl-theme owl-loaded owl-drag">
+        <?php 
+          $arg =array(
+            'posts_per_page' => -1,
+            'post_type' => 'testimonial',
+          );
+          $testimonial = new WP_Query($arg);
+        ?>
         <div class="owl-stage-outer">
-          <div class="owl-stage" style="transform: translate3d(-3360px, 0px, 0px); transition: all 1s ease 0s; width: 7840px;">
-            <div class="owl-item cloned" style="width: 1110px; margin-right: 10px;">
+          <div class="owl-stage" style="transform: translate3d(-3360px, 0px, 0px); transition: all 1s ease 0s; width: 7840px;"> 
+            <?php
+              while($testimonial->have_posts()){
+              $testimonial->the_post();
+              $featured_img_url = get_the_post_thumbnail_url();
+            ?> 
+            <div class="owl-item" style="width: 1110px; margin-right: 10px;">              
               <div class="testimonial-item">
-        <div class="inner-content">
-          <div class="icon-left"><i class="fa fa-quote-left"></i>
-          </div>
-            <h4><p style="text-align: center;">Humayun is very great developer to work with.He understands the requirements correctly and his communication is very impressive.He gave me pixel perfect work for WordPress site. I’m recommending anyone who wants to create WordPress site</p>
-            </h4>
-<!-- <q>I am one of his permanent clients. He is my go to guy for front end, but very knowledgeable on the backend as well.</q>  -->
-          <div class="icon-right"><i class="fa fa-quote-left"></i></div>
-        </div>
-      <div class="testimonial-image">
-         <div class="media">
-              <img class="mr-3 image-fluid ">
-            <div class="img_client_testimonial">
-              <img width="499" height="498" src="https://codonist.com/wp-content/uploads/2019/04/img_avatar.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2019/04/img_avatar.png 499w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-300x300.png 300w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-150x150.png 150w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-20x20.png 20w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-100x100.png 100w" sizes="(max-width: 499px) 100vw, 499px">
-            </div>
-              <div class="media-body mt-4">
-                <h5 class="mt-0">Matin</h5>
-                Qaswa web
-              </div>
-        </div>
-      </div>
-            </div>
-        </div>
-      <div class="owl-item cloned" style="width: 1110px; margin-right: 10px;">
-            <div class="testimonial-item">
                 <div class="inner-content">
-                    <div class="icon-left"><i class="fa fa-quote-left"></i></div>
-                  <h4><p style="text-align: center;">I was apprehensive about using a freelancer to help on our website development but Hamayun was absolutely perfect,great communication &amp; went above and beyond to ensure the project was completed on time and to our utmost satisfaction.We will definitely be using you again! Thank you</p>
-                  </h4>
-        <!-- <q>I am one of his permanent clients. He is my go to guy for front end, but very knowledgeable on the backend as well.</q>  -->
-                    <div class="icon-right"><i class="fa fa-quote-left"></i></div>
+                  <div class="icon-left"><i class="fa fa-quote-left"></i></div>
+                    <h4><p style="text-align: center;"> <?php echo get_the_content(); ?> </p></h4>
+                  <div class="icon-right"><i class="fa fa-quote-left"></i></div>
                 </div>
-                  <div class="testimonial-image">
-                      <div class="media">
-                          <img class="mr-3 image-fluid ">
-                          <div class="img_client_testimonial"><img width="499" height="498" src="https://codonist.com/wp-content/uploads/2019/04/img_avatar.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2019/04/img_avatar.png 499w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-300x300.png 300w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-150x150.png 150w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-20x20.png 20w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-100x100.png 100w" sizes="(max-width: 499px) 100vw, 499px"></div>
-                          <div class="media-body mt-4">
-                              <h5 class="mt-0">Carasti</h5>
-                          </div>
-                      </div>
-                  </div>
-            </div>
-        </div>
-      <div class="owl-item" style="width: 1110px; margin-right: 10px;">
-        <div class="testimonial-item">
-            <div class="inner-content">
-              <div class="icon-left"><i class="fa fa-quote-left"></i></div>
-                <h4><p style="text-align: center;">I am one of its parmanent client.He is my go to guy for front end but very knowledgeable on the backend as well</p>
-                </h4>
-            <!-- <q>I am one of his permanent clients. He is my go to guy for front end, but very knowledgeable on the backend as well.</q>  -->
-                <div class="icon-right"><i class="fa fa-quote-left"></i></div>
-            </div>
-              <div class="testimonial-image">
-                <div class="media">
-                <img class="mr-3 image-fluid ">
-                    <div class="img_client_testimonial"><img width="499" height="498" src="https://codonist.com/wp-content/uploads/2019/04/img_avatar.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2019/04/img_avatar.png 499w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-300x300.png 300w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-150x150.png 150w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-20x20.png 20w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-100x100.png 100w" sizes="(max-width: 499px) 100vw, 499px"></div>
-                    <div class="media-body mt-4"><h5 class="mt-0">Patrick choi</h5>CAA Financial</div>
-                </div>
-              </div>
-        </div>
-      </div>
-      <div class="owl-item active" style="width: 1110px; margin-right: 10px;">
-        <div class="testimonial-item">
-          <div class="inner-content">
-                <div class="icon-left"><i class="fa fa-quote-left"></i></div>
-                <h4><p style="text-align: center;">Humayun is very great developer to work with.He understands the requirements correctly and his communication is very impressive.He gave me pixel perfect work for WordPress site. I’m recommending anyone who wants to create WordPress site</p>
-                </h4>
-                <!-- <q>I am one of his permanent clients. He is my go to guy for front end, but very knowledgeable on the backend as well.</q>  -->
-                <div class="icon-right"><i class="fa fa-quote-left"></i></div>
-          </div>
-          <div class="testimonial-image">
-              <div class="media">
-                  <img class="mr-3 image-fluid ">
-                  <div class="img_client_testimonial"><img width="499" height="498" src="https://codonist.com/wp-content/uploads/2019/04/img_avatar.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2019/04/img_avatar.png 499w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-300x300.png 300w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-150x150.png 150w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-20x20.png 20w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-100x100.png 100w" sizes="(max-width: 499px) 100vw, 499px"></div>
-                  <div class="media-body mt-4"><h5 class="mt-0">Matin</h5>Qaswa web</div>
-              </div>
-          </div>
-        </div>
-      </div>
-        <div class="owl-item" style="width: 1110px; margin-right: 10px;">
-          <div class="testimonial-item">
-              <div class="inner-content">
-                <div class="icon-left"><i class="fa fa-quote-left"></i></div>
-                <h4><p style="text-align: center;">I was apprehensive about using a freelancer to help on our website development but Hamayun was absolutely perfect,great communication &amp; went above and beyond to ensure the project was completed on time and to our utmost satisfaction.We will definitely be using you again! Thank you</p>
-                </h4>
-                <!-- <q>I am one of his permanent clients. He is my go to guy for front end, but very knowledgeable on the backend as well.</q>  -->
-                <div class="icon-right"><i class="fa fa-quote-left"></i></div>
-              </div>
-              <div class="testimonial-image">
-                <div class="media">
-                  <img class="mr-3 image-fluid ">
-                  <div class="img_client_testimonial"><img width="499" height="498" src="https://codonist.com/wp-content/uploads/2019/04/img_avatar.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2019/04/img_avatar.png 499w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-300x300.png 300w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-150x150.png 150w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-20x20.png 20w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-100x100.png 100w" sizes="(max-width: 499px) 100vw, 499px"></div>
-                  <div class="media-body mt-4"><h5 class="mt-0">Carasti</h5></div>
-                </div>
-              </div>
-          </div>
-        </div>
-      <div class="owl-item cloned" style="width: 1110px; margin-right: 10px;">
-          <div class="testimonial-item">
-                    <div class="inner-content">
-                    <div class="icon-left"><i class="fa fa-quote-left"></i></div>
-                    <h4><p style="text-align: center;">I am one of its parmanent client.He is my go to guy for front end but very knowledgeable on the backend as well</p>
-                    </h4>
-                    <!-- <q>I am one of his permanent clients. He is my go to guy for front end, but very knowledgeable on the backend as well.</q>  -->
-                    <div class="icon-right"><i class="fa fa-quote-left"></i></div>
-                    </div>
+                
                 <div class="testimonial-image">
                   <div class="media">
                     <img class="mr-3 image-fluid ">
-                    <div class="img_client_testimonial"><img width="499" height="498" src="https://codonist.com/wp-content/uploads/2019/04/img_avatar.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2019/04/img_avatar.png 499w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-300x300.png 300w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-150x150.png 150w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-20x20.png 20w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-100x100.png 100w" sizes="(max-width: 499px) 100vw, 499px"></div>
-                    <div class="media-body mt-4"><h5 class="mt-0">Patrick choi</h5>CAA Financial</div>
+                    <div class="img_client_testimonial">
+                      <img width="499" height="498" src="<?php echo $featured_img_url ?>">
+                    </div>
+                    <div class="media-body mt-4">
+                      <h5 class="mt-0"><?php the_title(); ?></h5>
+                      <?php the_excerpt(); ?>
+                    </div>
                   </div>
                 </div>
+                
+              </div> 
+            </div>
+            <?php
+            }
+            ?>
           </div>
         </div>
-            <div class="owl-item cloned" style="width: 1110px; margin-right: 10px;">
-              <div class="testimonial-item">
-                  <div class="inner-content">
-                      <div class="icon-left"><i class="fa fa-quote-left"></i></div>
-                      <h4><p style="text-align: center;">Humayun is very great developer to work with.He understands the requirements correctly and his communication is very impressive.He gave me pixel perfect work for WordPress site. I’m recommending anyone who wants to create WordPress site</p>
-                      </h4>
-                      <!-- <q>I am one of his permanent clients. He is my go to guy for front end, but very knowledgeable on the backend as well.</q>  -->
-                      <div class="icon-right"><i class="fa fa-quote-left"></i></div>
-                  </div>
-                  <div class="testimonial-image">
-                      <div class="media">
-                          <img class="mr-3 image-fluid ">
-                          <div class="img_client_testimonial"><img width="499" height="498" src="https://codonist.com/wp-content/uploads/2019/04/img_avatar.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://codonist.com/wp-content/uploads/2019/04/img_avatar.png 499w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-300x300.png 300w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-150x150.png 150w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-20x20.png 20w, https://codonist.com/wp-content/uploads/2019/04/img_avatar-100x100.png 100w" sizes="(max-width: 499px) 100vw, 499px"></div>
-                          <div class="media-body mt-4"><h5 class="mt-0">Matin</h5>Qaswa web</div>
-                      </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-    </div>
-        <div class="owl-nav disabled">
+        <!-- <div class="owl-nav disabled">
           <button type="button" role="presentation" class="owl-prev">
             <span aria-label="Previous">‹</span>
           </button>
           <button type="button" role="presentation" class="owl-next">
             <span aria-label="Next">›</span>
           </button>
-        </div>
-        <div class="owl-dots disabled"></div>
+          </div>
+        <div class="owl-dots disabled"></div> -->
       </div>
     </div>
 </section>
 
 <!---------------------------Contact Us Section------------------------------>
 
-<section class="contactus-section">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3390.1990283016175!2d70.89704241449121!3d31.819572539491592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39266d55f80b5d89%3A0x9510081386df7b28!2sCodonist%20Software%20House!5e0!3m2!1sen!2s!4v1613546370716!5m2!1sen!2s" width="100%" height="756" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+<section id='contact' class="contactus-section">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3390.1990283016175!2d70.89704241449121!3d31.819572539491592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39266d55f80b5d89%3A0x9510081386df7b28!2sCodonist%20Software%20House!5e0!3m2!1sen!2s!4v1613546370716!5m2!1sen!2s" width="100%" height="900" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     
     <div class="layout">
     </div>
   <div class="container">
     <h2 class="section-title" style="max-width:max-content;margin:0 auto;">Contact Us
-      <span class="border-line">
-        <span class="border-box"></span>
+      <span class="title-line">
+        <span class="title-box"></span>
       </span>
     </h2>
     <div class="transparent-bg">
       <div class="row justify-content-center">
           <div class="col-md-9 ">
-              <form method="post" action="inc/mail.php" id="contactForm" class="contact-form">
-                  <h3 class="title-1 Text-Dark"> Let's Contact</h3>
-                  <h5 class="title-2 Text-Dark">We'd love to help you to complete your IT goals</h5>
-                  <div class="form-group contact-us-form">
-                      <input type="text" class="form-control txtfield" id="name" name="name" placeholder="What kind of project?" required="">
-                  </div>
-                  <div class="form-group contact-us-form">
-                      <input type="text" class="form-control txtfield" id="name" name="name" placeholder="Name" required="">
-                  </div>
-                  <div class="form-group contact-us-form">
-                      <input type="email" class="form-control txtfield" id="email" name="email" placeholder="Email" required="">
-                  </div>
-                  <div class="form-group contact-us-form">
-                      <textarea class="form-control txtfield" id="message" rows="4" name="message" placeholder="Message" required=""></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-primary btn-block btnsubmit">Submit</button>
-              </form>
+            <h3 class="title-1 Text-Dark"> Let's Contact</h3>
+            <h5 class="title-2 Text-Dark">We'd love to help you to complete your IT goals</h5>
+            <?php echo do_shortcode('[contact-form-7 id="82" title="Contact Us Form"]'); ?>
           </div>
       </div>
    </div>
