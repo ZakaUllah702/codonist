@@ -26,26 +26,29 @@
                     <a class="nav-link" href="#">Play HTML Game <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-link" href="<?php site_url()?>#services">Services</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        PortFolio
+                    <a class="nav-link" href="<?php site_url()?>#skills" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Skills
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">ContactUs</a>
+                    <a class="nav-link" href="<?php site_url()?>#team">Our Team</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">AboutUs</a>
+                    <a class="nav-link" href="<?php site_url()?>#work">Our Work</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Career</a>
+                    <a class="nav-link" href="<?php site_url()?>#testimonial">Testimonial</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="<?php site_url()?>#contact">Contact Us</a>
                   </li>
                 </ul>
-                      <div>
-                      <i class="fa fa-search" style="color: #ffffff;"></i>
-                      </div>
+                  <div>
+                    <i class="fa fa-search" style="color: #ffffff;"></i>
+                  </div>
               </div>
             </nav>     
     </div>
