@@ -26,9 +26,9 @@
           <h3>ABOUT US</h3>
           <div class="widgets">
             <ul>
-              <li><a href="#">Our Services</a></li>
-              <li><a href="#">Our Skills</a></li>
-              <li><a href="#">Our Hardwork</a></li>
+              <li><a href="<?php site_url()?>#services">Our Services</a></li>
+              <li><a href="<?php site_url()?>#skills">Our Skills</a></li>
+              <li><a href="<?php site_url()?>#work">Our Hardwork</a></li>
             </ul>
           </div>
         </div>
@@ -50,10 +50,10 @@
           <h3>KNOW US</h3>
           <div class="widgets">
             <ul>
-              <li><i class="fa fa-twitter"></i><a href="#">&nbsp;&nbsp;Twitter</a></li>
-              <li><i class="fa fa-facebook-f"></i><a href="#">&nbsp;&nbsp;Facebook</a></li>
-              <li><i class="fa fa-youtube"></i><a href="#">&nbsp;&nbsp;Youtube</a></li>
-              <li><i class="fa fa-linkedin"></i><a href="#">&nbsp;&nbsp;Linked In</a></li>
+              <li><i class="fa fa-twitter"></i><a href="https://twitter.com/TheCodonist">&nbsp;&nbsp;Twitter</a></li>
+              <li><i class="fa fa-facebook-f"></i><a href="https://www.facebook.com/codonist?_rdc=1&_rdr">&nbsp;&nbsp;Facebook</a></li>
+              <li><i class="fa fa-youtube"></i><a href="https://www.youtube.com/channel/UCgWpHwCrZ24EzXGHMQ_D-Og">&nbsp;&nbsp;Youtube</a></li>
+              <li><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/company/codonist">&nbsp;&nbsp;Linked In</a></li></a>
             </ul>
           </div>
         </div>

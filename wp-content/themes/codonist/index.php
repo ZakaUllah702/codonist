@@ -2,6 +2,10 @@
 get_header();
 ?>
 
+<!---------------------------Scroll Button------------------------------>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
  <!---------------------------Hero Section------------------------------>
 
 <section class="hero-section" style ="background-image: url(<?php echo get_theme_file_uri('/img/hero.jpg') ?>);" >
